@@ -1,9 +1,11 @@
 def count_characters(string):
     lowered_string = string.lower()
     dict_char = {}
-    alphabets = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-    for char in alphabets:
-        dict_char[char] = lowered_string.count(char)
+    for char in lowered_string:
+        if char in dict_char:
+            dict_char[char] += 1
+        else:
+            dict_char[char] = 1
     return dict_char
 
 def count(string):
